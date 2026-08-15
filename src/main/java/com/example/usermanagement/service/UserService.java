@@ -39,8 +39,15 @@ public class UserService {
 
     public User update(Long id, User updatedUser) {
         User existing = findById(id);
+
         existing.setName(updatedUser.getName());
+        existing.setUsername(updatedUser.getUsername());
         existing.setEmail(updatedUser.getEmail());
+        existing.setAddress(updatedUser.getAddress());
+        existing.setPhone(updatedUser.getPhone());
+        existing.setWebsite(updatedUser.getWebsite());
+        existing.setCompany(updatedUser.getCompany());
+        
         return existing;
     }
 
